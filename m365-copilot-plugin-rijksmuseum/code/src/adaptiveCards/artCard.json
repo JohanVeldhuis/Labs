@@ -1,0 +1,87 @@
+{
+  "type": "AdaptiveCard",
+  "body": [
+      {
+          "type": "TextBlock",
+          "text": "${objectTitle}",
+          "wrap": true,
+          "size": "large"
+      },
+      {
+          "type": "Image",
+          "url": "${objectHeaderImage}",
+          "altText": "${objectTitle}"
+      },
+      {
+        "type": "TextBlock",
+        "text": "${objectDescription}",
+        "wrap": true
+      },        
+      {
+          "type": "TextBlock",
+          "text": "Object details",
+          "color": "Accent",
+          "style": "heading"
+      },      
+      {
+          "type": "FactSet",
+          "facts": [
+            {
+              "title": "Presenting date",
+              "value": "${objectPresentingDate}"
+            },
+            {
+                "title": "Dimensions",
+                "value": "${objectDimensions}"
+            },
+            {
+                "title": "Type",
+                "value": "${objectType}"
+            },
+            {
+                "title": "Materials",
+                "value": "${objectMaterials}"
+            }               
+          ]
+      },
+      {
+          "type": "TextBlock",
+          "text": "Maker",
+          "color": "Accent",
+          "style": "heading"
+      },
+      {
+          "type": "FactSet",
+          "facts": [
+              {
+                  "title": "Name",
+                  "value": "${artistName}"
+              },
+              {
+                  "title": "Nationality",
+                  "value": "${artistNationality}"
+              },
+              {
+                  "title": "Date of birth",
+                  "value": "${artistDateOfBirth} (${artistPlaceOfBirth})"
+              },
+              {
+                  "title": "Date of death",
+                  "value": "${artistDateOfDeath} (${artistPlaceOfDeath})"
+              }                                
+          ]
+      },
+      {
+          "type": "ActionSet",
+          "actions": [
+              {
+                  "type": "Action.OpenUrl",
+                  "title": "Open in browser",
+                  "url": "${objectWebImage}"
+              }
+          ]
+      }      
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.6"
+}
