@@ -20,7 +20,7 @@ If you are not familiar follow the steps below which will help you getting start
 
 3.	Search for the button New Card the menu bar, this will open the window shown below:
 
-    ![Update Adaptive Card](/assets/images/adaptivecard_update.png)
+    ![Update Adaptive Card](/m365-copilot-plugin-rijksmuseum/assets/images/adaptivecard_update.png)
 
 4.	Select one of the cards from the ***Explore** section or select **Blank Card** to start from scratch
 5.	Once the designer has loaded you will either get a blank card or a card with several components on it. Prior to making any changes to the adaptive card perform the following changes in the designer menu settings:
@@ -30,7 +30,7 @@ If you are not familiar follow the steps below which will help you getting start
     
 6.	In the left part of the screen you will find **Card Elements** which you can add easily to your adaptive card by drag and drop
 
-    ![Adaptive Card elements](/assets/images/adaptivecard_elements.png)
+    ![Adaptive Card elements](/m365-copilot-plugin-rijksmuseum/assets/images/adaptivecard_elements.png)
 
 7.	Once you added a card element to your adaptive card it is time to customize it. To make sure the card is showing the text which is retrieved from the API only one change is required.
 
@@ -39,7 +39,7 @@ If you are not familiar follow the steps below which will help you getting start
     Update this value to **\${\<Name of the property>}** for example **\${objectTitle}**
 
 
-    ![Programming language](/assets/images/adaptivecard_element_properties.png)
+    ![Programming language](/m365-copilot-plugin-rijksmuseum/assets/images/adaptivecard_element_properties.png)
 
     Feel free to make additional changes in the **Layout** and **Style** section of the **Element Properties**.
 

@@ -5,11 +5,11 @@ Now Node.js is installed you can continue setting up Visual Studio Code. Using t
 1.	Open Visual Studio Code
 2.	In the menu on the left select the **extensions** button:
 
-    ![Extension button](/assets/images/extensions_button.png)
+    ![Extension button](/m365-copilot-plugin-rijksmuseum/assets/images/extensions_button.png)
 
 3.	In the new opened pane enter **Teams Toolkit** in the search field which should result in something similar like below:
 
-    ![Teams toolkit](/assets/images/teams_toolkit.png)
+    ![Teams toolkit](/m365-copilot-plugin-rijksmuseum/assets/images/teams_toolkit.png)
 
 4.	Press **Install** to install the Teams Toolkit
 5.	Once installed new options will be shown in the main screen of Visual Studio Code, the first one is called **Get your environment ready**, press the button **Run Prerequisite Checker** and make sure no errors are shown in the **output** window on the bottom. 
@@ -20,16 +20,16 @@ Now Node.js is installed you can continue setting up Visual Studio Code. Using t
     
 6.	In the **extensions** pane select the **gear** icon
 
-    ![Teams Toolkit settings](/assets/images/teams_toolkit_settings.png)
+    ![Teams Toolkit settings](/m365-copilot-plugin-rijksmuseum/assets/images/teams_toolkit_settings.png)
 
 7.	From the menu select the Extension Settings option
 
-    ![Extension settings](/assets/images/extension_settings.png)
+    ![Extension settings](/m365-copilot-plugin-rijksmuseum/assets/images/extension_settings.png)
 
 8.	In the settings page enable the option Develop Copilot Plugin
 
-    ![Develop Copilot plugin](/assets/images/develop_copilot_plugin.png)
+    ![Develop Copilot plugin](/m365-copilot-plugin-rijksmuseum/assets/images/develop_copilot_plugin.png)
     
 9.	Close the settings by pressing the X
     
-    ![Close settings](/assets/images/close_settings.png) 
+    ![Close settings](/m365-copilot-plugin-rijksmuseum/assets/images/close_settings.png) 

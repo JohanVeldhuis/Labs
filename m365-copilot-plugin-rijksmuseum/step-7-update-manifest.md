@@ -6,7 +6,7 @@ The manifest can be found in the **appPackage** folder, perform the steps below 
 1.	Open **manifest.json**
 2.	Find the **developer** section as shown below and update values to for example your own name and website 
 
-     ![Manifest.json](/assets/images/manifest.png)
+     ![Manifest.json](/m365-copilot-plugin-rijksmuseum/assets/images/manifest.png)
 
 3.	Find the **commands** section. This will be the section where you can define the commands as well as the parameters which are available.
 
@@ -14,7 +14,7 @@ The manifest can be found in the **appPackage** folder, perform the steps below 
     
     Both the command and parameters do have the **description** and **semanticDescription** properties. This information will be used by Copilot to determine if a command is suitable and if suitable which parameter or parameters will be used. 
     
-    ![Module manifest Semantic description](/assets/images/manifest_semanticDescription.png)
+    ![Module manifest Semantic description](/m365-copilot-plugin-rijksmuseum/assets/images/manifest_semanticDescription.png)
 
     Update the **commands** part with the following code.
 
