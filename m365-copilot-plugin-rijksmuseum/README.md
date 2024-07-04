@@ -18,4 +18,14 @@ Lab guide which can be used to create a plugin for M365 Copilot based on the ope
   *	[Rijksstudio - Rijksmuseum](https://www.rijksmuseum.nl/en/rijksstudio)
 
 
-For furthe instructions please see the Word document
+The lab is split in in 9 steps, where the 9th step is optional.
+
+1. [Prerequisites](step-1-prerequisites.md)
+2. [Install Nodejs](step-2-nodejs.md)
+3. [Get API key](step-3-get-api-key.md)
+4. [Setup VSCode](step-4-setup-vscode.md)
+5. [Create plugin](step-5-create-plugin.md)
+6. [Update adaptive card](step-6-update-adaptivecard.md)
+7. [Update manifest](step-7-update-manifest.md)
+8. [Testing](step-8-testing.md)
+9. [Challenge yourself](step-9-challenge-yourself.md)

@@ -1,4 +1,4 @@
-## Getting an API-key
+# Step 3: Getting an API-key
 
 Since we don’t let all our users create an account for the API we are going to use an API-key. This will allow every user who has access to the plug-in to query the data.
 Follow the steps below to create an API-key:
