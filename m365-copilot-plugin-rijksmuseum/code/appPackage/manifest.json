@@ -3,6 +3,7 @@
     "manifestVersion": "devPreview",
     "version": "1.0.0",
     "id": "${{TEAMS_APP_ID}}",
+    "packageName": "com.microsoft.teams.extension",
     "developer": {
         "name": "Teams App, Inc.",
         "websiteUrl": "https://www.example.com",
@@ -14,12 +15,12 @@
         "outline": "outline.png"
     },
     "name": {
-        "short": "Rijksmuseum${{APP_NAME_SUFFIX}}",
-        "full": "full name for Rijksmuseum"
+        "short": "RijksMuseum${{APP_NAME_SUFFIX}}",
+        "full": "Rijks Museum digital archive"
     },
     "description": {
-        "short": "Find npm package by name.",
-        "full": "Find npm package according to the npm package name."
+        "short": "Find art in the Rijkmuseum digital archive.",
+        "full": "Find art in the Rijksmuseum digital archive by searching on name of the art, creator or timeperiod."
     },
     "accentColor": "#FFFFFF",
     "bots": [],
@@ -28,23 +29,67 @@
             "botId": "${{BOT_ID}}",
             "commands": [
                 {
-                    "id": "findNpmPackage",
+                    "id": "findArt",
                     "context": [
                         "compose",
                         "commandBox"
                     ],
-                    "description": "Find npm package according to the npm package name",
-                    "title": "Find Npm Package",
+                    "description": "Find art available in the Rijksmuseum using the art title",
+                    "title": "Find art in using the title",
                     "type": "query",
-                    "semanticDescription": "This command retrieves detailed information about an npm package using the provided npm package name.",
+                    "semanticDescription": "This command retrieves detailed information about art objects which can are available in the Rijksmuseum using the provided art title or artist which did created the art object.", 
+                    "samplePrompts": [
+                        {
+                         "text": "What art objects created by Rembrandt van Rijn can be seen in the Rijksmuseum"
+                        },
+                        {
+                         "text": "Can you find more information about De Nachtwacht which can be seen in the Rijksmuseum"
+                        },
+                        {
+                         "text": "Which art objects created in the 21st century can be seen in the Rijksmuseum"
+                        },
+                        {
+                         "text": "Which art objects of the type schilderij can be seen in the Rijksmuseum"
+                        }                                                
+                    ],                                       
                     "parameters": [
                         {
-                            "name": "NpmPackageName",
-                            "title": "Npm Package Name",
-                            "description": "The name of the npm package to be searched",
+                            "name": "ObjectTitle",
+                            "title": "Object Title",
+                            "description": "The title of the piece of art or object to be searched",
                             "inputType": "text",
-                            "semanticDescription": "This parameter is used to identify the specific npm package to be queried. Users should provide the exact name of the npm package they want to retrieve information for as the value of this parameter."
-                        }
+                            "semanticDescription": "This parameter is used to identify the specific art object to be queried. Users should provide the exact name of the art object they want to retrieve information for as the value of this parameter."
+                         
+                        },
+                        {
+                            "name": "Artist",
+                            "title": "Artist",
+                            "description": "Artist or maker of the art or object",
+                            "inputType": "text",
+                            "semanticDescription": "This parameter is used to identify which art objects a specific artist did create. Users should provide the name of the artist from which they want to know which art objects the artist did create as the value of this parameter."
+                         
+                        },
+                        {
+                            "name": "Type",
+                            "title": "Type",
+                            "description": "Type of the art or object",
+                            "inputType": "text",
+                            "semanticDescription": "This parameter is used to identify which art objects are from a specific type. Users should provide the type of art object they are searching for as the value of this parameter."
+                        },
+                        {
+                            "name": "Century",
+                            "title": "Century",
+                            "description": "The century in which the art or object is created, made",
+                            "inputType": "text",
+                            "semanticDescription": "This parameter is used to identify which art objects are created in a century. Users should provide the century to search for art objects created in that specific century for as the value of this parameter."                            
+                        },
+                        {
+                            "name": "TopPieces",
+                            "title": "Top pieces",
+                            "description": "Top pieces of art or object",
+                            "inputType": "text",
+                            "semanticDescription": "This parameter is used to identify which art objects are belonging to the top pieces of the Rijksmuseum. Users should provide include top pieces as the value of this parameter."                                                        
+                        }                                                                                                      
                     ]
                 }
             ]
