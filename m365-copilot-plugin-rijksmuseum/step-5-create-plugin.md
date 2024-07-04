@@ -67,12 +67,17 @@ The other notification can be removed by clicking on the X in the right top corn
 
     This will bring you back to the explorer view in Visual Studio Code in which you will see several folders and files being created by the Teams Toolkit
 
-2.	 Open the **.localconfigs** file in the root of the project and add the following line:
+2.   Open the **.env.local** file located in the **env** folder and add the following line:
 
-     `RIJKS_APIKEY=<YOUR API KEY>`
+     `RIJKS_API_KEY=<YOUR API KEY>`
 
      Make sure to save the file once you made the modification.
-3.	Go to the **SRC** folder and open **config.js**, below the **botPassword** entry add the following line:
+3.	 Open the **.localconfigs** file in the root of the project and add the following line:
+
+     `RIJKS_APIKEY=`
+
+     Make sure to save the file once you made the modification.
+4.	Go to the **SRC** folder and open **config.js**, below the **botPassword** entry add the following line:
 
     `rijksAPI: process.send.RIJKS_API`
     
@@ -81,14 +86,14 @@ The other notification can be removed by clicking on the X in the right top corn
     ![config.js file](/m365-copilot-plugin-rijksmuseum/assets/images/config.png)
 
     Save the file after making the modifications
-4.	In the **SRC** folder you will also find a file called **searchApp.js** this is the file where you will add the code which can be used by Copilot to query the Rijksmuseum data api and provide an answer on your question.
+5.	In the **SRC** folder you will also find a file called **searchApp.js** this is the file where you will add the code which can be used by Copilot to query the Rijksmuseum data api and provide an answer on your question.
 Open the file and find the section shown below:
 
     ![searchApp.js](/m365-copilot-plugin-rijksmuseum/assets/images/search.png)
 
     Currently if you would run the app you would be able to query the NPM.js registry containing the components available for NPM.js.
     Remove everything from this section **except** the first line which starts with **async**.
-5.	To make sure you can use different parameters to search for the data add the following code:
+6.	To make sure you can use different parameters to search for the data add the following code:
 
     ~~~
     const { parameters } = query;
@@ -102,7 +107,7 @@ Open the file and find the section shown below:
 
     ![getParameterbyName.js](/m365-copilot-plugin-rijksmuseum/assets/images/getparameterbyname.png)
     
-6.	To see what parameters Copilot does send to your plugin add the following code below the code you just added:
+7.	To see what parameters Copilot does send to your plugin add the following code below the code you just added:
 
     ~~~
     console.log(`🔍 Object: '${objectTitle}' | Artist: '${artist}' | Type
@@ -112,7 +117,7 @@ Open the file and find the section shown below:
     |Note|
     | --- |
     |Although not strictly necessary make sure the code above is on one line to make it easier to read the code.|
-7.	To make sure the correct query is send validation of the parameter values is required.
+8.	To make sure the correct query is send validation of the parameter values is required.
 To do this add the following code:
 
     ~~~
@@ -132,7 +137,7 @@ To do this add the following code:
     Using the code above we define the **baseUrlCollection** constant. This is the URL part which is similar for all requests in the plug-in and will make it easier to update the code if the URL would change in the future.
     
     In addition to this the if statements will validate if a parameter has a value and if so it will send the query to the API with the value provided by Copilot.
-8.	To see how many results were returned add the following code
+9.	To see how many results were returned add the following code
 
     ~~~
     console.log(
@@ -144,7 +149,7 @@ To do this add the following code:
     | --- |
     |Although not strictly necessary make sure the code above is on one line to make it easier to read the code.|
 
-9.	Since the responses in the API will only provide us basic information about the art object or artist which created the object you will need to add some additional code to collect additional details about the object. This will be done by using the **objectnumber** which has been assigned to each object.
+10.	Since the responses in the API will only provide us basic information about the art object or artist which created the object you will need to add some additional code to collect additional details about the object. This will be done by using the **objectnumber** which has been assigned to each object.
 Find the following section in the code:
 
     ![getParameterbyName.js](/m365-copilot-plugin-rijksmuseum/assets/images/attachments.png)
@@ -286,12 +291,13 @@ Find the following section in the code:
         artistPlaceOfBirth: artistPlaceOfBirth,
         artistPlaceOfDeath: artistPlaceOfDeath
         ~~~
-    11.	As discussed earlier we need to add some code which allows us to map the parameter name to the value specified. To do this add the following code above the **module exports.Search** line:
+11.	As discussed earlier we need to add some code which allows us to map the parameter name to the value specified. To do this add the following code above the **module exports.Search** line:
     
-        ~~~
-        const getParameterByName = (parameters, name) => {
-          const param = parameters.find(p => p.name === name);
-          return param ? param.value : '';
-        }
-        ~~~
-    12.	Save the file
+    ~~~
+    const getParameterByName = (parameters, name) => {
+    const param = parameters.find(p => p.name === name);
+    return param ? param.value : '';
+    }
+    ~~~
+
+12.	Save the file
