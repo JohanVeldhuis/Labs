@@ -29,3 +29,6 @@ The lab is split in in 9 steps, where the 9th step is optional.
 7. [Update manifest](step-7-update-manifest.md)
 8. [Testing](step-8-testing.md)
 9. [Challenge yourself](step-9-challenge-yourself.md)
+
+## Video
+<video src="/m365-copilot-plugin-rijksmuseum/assets/video/Searching%20for%20Rembrandt.mp4" width="300" />
