@@ -4,4 +4,4 @@ In this repo you will find lab manuals which I created for several events which 
 
 | solution | description | video |
 | -------- | ----------- | ----- |
-|[Rijks museum plugin](/m365-copilot-plugin-rijksmuseum/README.md) | This plugin allows you to query the REST API to see which art is visible in the Rijksmuseum|[video](/m365-copilot-plugin-rijksmuseum/assets/video/Searching%20for%20Rembrandt.mp4)|
+|[Rijks museum plugin](/m365-copilot-plugin-rijksmuseum/README.md) | This plugin allows you to query the REST API to see which art is visible in the Rijksmuseum|[video](https://youtu.be/Bik2u-E0c7Q)|
