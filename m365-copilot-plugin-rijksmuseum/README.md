@@ -31,4 +31,4 @@ The lab is split in in 9 steps, where the 9th step is optional.
 9. [Challenge yourself](step-9-challenge-yourself.md)
 
 ## Video
-<video src="/m365-copilot-plugin-rijksmuseum/assets/video/Searching%20for%20Rembrandt.mp4" width="300" />
+[watch](/m365-copilot-plugin-rijksmuseum/assets/video/Searching%20for%20Rembrandt.mp4)
