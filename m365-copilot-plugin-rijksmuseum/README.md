@@ -31,4 +31,4 @@ The lab is split in in 9 steps, where the 9th step is optional.
 9. [Challenge yourself](step-9-challenge-yourself.md)
 
 ## Video
-[watch](https://youtu.be/Bik2u-E0c7Q)
+▶️ [watch](https://youtu.be/Bik2u-E0c7Q)
