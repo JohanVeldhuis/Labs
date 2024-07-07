@@ -1,4 +1,4 @@
-# Lab
+# Searching for Rembrandt
 
 Lab guide which can be used to create a plugin for M365 Copilot based on the open data api from the Rijksmuseum
 
